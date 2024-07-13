@@ -1,9 +1,10 @@
 package name.minedustry;
 
+import name.minedustry.block.MinedustryBlocks;
+import name.minedustry.item.MinedustryItemGroups;
 import name.minedustry.item.MinedustryItems;
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.block.Block;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +24,8 @@ public class Minedustry implements ModInitializer {
 		LOGGER.info("Mod start");
 
 		MinedustryItems.registerModItems();
+		MinedustryItemGroups.registerModItemGroups();
+		MinedustryBlocks.registerModBlock();
 
 		LOGGER.info("Mod initial finish");
 	}

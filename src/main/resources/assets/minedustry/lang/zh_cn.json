@@ -1,3 +1,7 @@
 {
-  "item.minedustry.lead": "铅"
+  "itemGroup.minedustry_group": "Minedustry",
+
+  "item.minedustry.lead": "铅",
+
+  "block.minedustry.copper_wall": "铜墙"
 }
