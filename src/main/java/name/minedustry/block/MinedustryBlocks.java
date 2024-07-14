@@ -14,7 +14,20 @@ public class MinedustryBlocks {
             "copper_wall",
             new Block(
                     AbstractBlock.Settings.create()
+                            .requiresTool()
                             .strength(1.5f, 6.0f)));
+    public  static final Block TITANIUM_WALL = register(
+            "titanium_wall",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .requiresTool()
+                            .strength(2.5f, 6.5f)));
+    public  static final Block THORIUM_WALL = register(
+            "thorium_wall",
+            new Block(
+                    AbstractBlock.Settings.create()
+                            .requiresTool()
+                            .strength(3f, 7f)));
 
     public static void registerBlockItems(String id, Block block) {
         BlockItem item = Registry.register(

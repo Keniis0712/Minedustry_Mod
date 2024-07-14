@@ -2,6 +2,10 @@
   "itemGroup.minedustry_group": "Minedustry",
 
   "item.minedustry.lead": "铅",
+  "item.minedustry.titanium": "钛",
+  "item.minedustry.thorium": "钍",
 
-  "block.minedustry.copper_wall": "铜墙"
+  "block.minedustry.copper_wall": "铜墙",
+  "block.minedustry.titanium_wall": "钛墙",
+  "block.minedustry.thorium_wall": "钍墙"
 }

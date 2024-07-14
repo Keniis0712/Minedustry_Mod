@@ -20,8 +20,12 @@ public class MinedustryItemGroups {
             .icon(() -> new ItemStack(MinedustryItems.LEAD))
             .entries(((displayContext, entries) -> {
                 entries.add(MinedustryItems.LEAD);
+                entries.add(MinedustryItems.TITANIUM);
+                entries.add(MinedustryItems.THORIUM);
 
                 entries.add(MinedustryBlocks.COPPER_WALL);
+                entries.add(MinedustryBlocks.TITANIUM_WALL);
+                entries.add(MinedustryBlocks.THORIUM_WALL);
             }))
             .build());
 
