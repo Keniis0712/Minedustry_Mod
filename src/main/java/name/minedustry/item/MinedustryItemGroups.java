@@ -23,6 +23,8 @@ public class MinedustryItemGroups {
                 entries.add(MinedustryItems.TITANIUM);
                 entries.add(MinedustryItems.THORIUM);
 
+                entries.add(MinedustryItems.CRYOFLUID_BUCKET);
+
                 entries.add(MinedustryBlocks.COPPER_WALL);
                 entries.add(MinedustryBlocks.TITANIUM_WALL);
                 entries.add(MinedustryBlocks.THORIUM_WALL);
