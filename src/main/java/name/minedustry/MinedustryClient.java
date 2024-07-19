@@ -19,6 +19,23 @@ public class MinedustryClient implements ClientModInitializer {
                         0x66ccff
                 )
         );
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), Fluids.STILL_CRYOFLUID, Fluids.FLOWING_CRYOFLUID);
+        FluidRenderHandlerRegistry.INSTANCE.register(Fluids.STILL_OIL, Fluids.FLOWING_OIL,
+                new SimpleFluidRenderHandler(
+                        Identifier.of("minedustry", "block/oil_still"),
+                        Identifier.of("minedustry", "block/oil_flow"),
+                        0xFFFFFF
+                )
+        );
+        FluidRenderHandlerRegistry.INSTANCE.register(Fluids.STILL_SLAG, Fluids.FLOWING_SLAG,
+                new SimpleFluidRenderHandler(
+                        Identifier.of("minedustry", "block/slag_still"),
+                        Identifier.of("minedustry", "block/slag_flow"),
+                        0xFF8142
+                )
+        );
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
+                Fluids.STILL_CRYOFLUID, Fluids.FLOWING_CRYOFLUID,
+                Fluids.STILL_OIL, Fluids.FLOWING_OIL,
+                Fluids.STILL_SLAG, Fluids.FLOWING_SLAG);
     }
 }

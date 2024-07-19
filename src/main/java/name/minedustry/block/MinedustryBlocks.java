@@ -39,7 +39,37 @@ public class MinedustryBlocks {
             new FluidBlock(
                     Fluids.STILL_CRYOFLUID,
                     AbstractBlock.Settings.create()
-                            .mapColor(MapColor.WATER_BLUE)
+                            .mapColor(MapColor.LIGHT_BLUE)
+                            .replaceable()
+                            .noCollision()
+                            .strength(100.0F)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .dropsNothing()
+                            .liquid()
+                            .sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)
+            )
+    );
+    public static final Block OIL = register(
+            "oil",
+            new FluidBlock(
+                    Fluids.STILL_OIL,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.BLACK)
+                            .replaceable()
+                            .noCollision()
+                            .strength(100.0F)
+                            .pistonBehavior(PistonBehavior.DESTROY)
+                            .dropsNothing()
+                            .liquid()
+                            .sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)
+            )
+    );
+    public static final Block SLAG = register(
+            "slag",
+            new FluidBlock(
+                    Fluids.STILL_SLAG,
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.ORANGE)
                             .replaceable()
                             .noCollision()
                             .strength(100.0F)

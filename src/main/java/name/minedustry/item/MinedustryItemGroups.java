@@ -24,6 +24,8 @@ public class MinedustryItemGroups {
                 entries.add(MinedustryItems.THORIUM);
 
                 entries.add(MinedustryItems.CRYOFLUID_BUCKET);
+                entries.add(MinedustryItems.OIL_BUCKET);
+                entries.add(MinedustryItems.SLAG_BUCKET);
 
                 entries.add(MinedustryBlocks.COPPER_WALL);
                 entries.add(MinedustryBlocks.TITANIUM_WALL);

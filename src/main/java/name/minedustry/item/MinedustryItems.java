@@ -16,6 +16,8 @@ public class MinedustryItems {
     public static final Item THORIUM = registerItems("thorium", new Item(new Item.Settings()));
 
     public static final Item CRYOFLUID_BUCKET = registerItems("cryofluid_bucket", new BucketItem(Fluids.STILL_CRYOFLUID, new Item.Settings().recipeRemainder(BUCKET).maxCount(1)));
+    public static final Item OIL_BUCKET = registerItems("oil_bucket", new BucketItem(Fluids.STILL_OIL, new Item.Settings().recipeRemainder(BUCKET).maxCount(1)));
+    public static final Item SLAG_BUCKET = registerItems("slag_bucket", new BucketItem(Fluids.STILL_SLAG, new Item.Settings().recipeRemainder(BUCKET).maxCount(1)));
 
     private static Item registerItems(String id, Item item){
         return Registry.register(

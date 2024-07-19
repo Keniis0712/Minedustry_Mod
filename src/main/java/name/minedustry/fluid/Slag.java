@@ -10,7 +10,6 @@ import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
-import net.minecraft.item.MaceItem;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -19,20 +18,21 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public abstract class CryoFluid extends FlowableFluid {
+
+public abstract class Slag extends FlowableFluid {
     @Override
     public Fluid getFlowing() {
-        return Fluids.FLOWING_CRYOFLUID;
+        return Fluids.FLOWING_SLAG;
     }
 
     @Override
     public Fluid getStill() {
-        return Fluids.STILL_CRYOFLUID;
+        return Fluids.STILL_SLAG;
     }
 
     @Override
     public Item getBucketItem() {
-        return MinedustryItems.CRYOFLUID_BUCKET;
+        return MinedustryItems.SLAG_BUCKET;
     }
 
     @Override
@@ -48,12 +48,12 @@ public abstract class CryoFluid extends FlowableFluid {
 
     @Override
     public int getMaxFlowDistance(WorldView world) {
-        return 4;
+        return 2;
     }
 
     @Override
     public BlockState toBlockState(FluidState state) {
-        return MinedustryBlocks.CRYOFLUID.getDefaultState().with(FluidBlock.LEVEL, getBlockStateLevel(state));
+        return MinedustryBlocks.SLAG.getDefaultState().with(FluidBlock.LEVEL, getBlockStateLevel(state));
     }
 
     @Override
@@ -63,12 +63,12 @@ public abstract class CryoFluid extends FlowableFluid {
 
     @Override
     protected int getLevelDecreasePerBlock(WorldView world) {
-        return 1;
+        return 2;
     }
 
     @Override
     public int getTickRate(WorldView world) {
-        return 5;
+        return 10;
     }
 
     @Override
@@ -81,7 +81,7 @@ public abstract class CryoFluid extends FlowableFluid {
         return 100.0F;
     }
 
-    public static class Flowing extends CryoFluid {
+    public static class Flowing extends Slag {
         @Override
         protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
             super.appendProperties(builder);
@@ -99,7 +99,7 @@ public abstract class CryoFluid extends FlowableFluid {
         }
     }
 
-    public static class Still extends CryoFluid {
+    public static class Still extends Slag {
         @Override
         public int getLevel(FluidState state) {
             return 8;
